@@ -3,8 +3,10 @@
     <head th:replace="~{layout/plantilla :: head}">
         <title>Tienda</title>
     </head>
-    <body>
-        <form th:action="@{/user/crear}" th:object="${user}" method="POST" class="was-validated">
+    <body class="login_body">
+        <div class="login_div">
+        <form th:action="@{/user/crear}" th:object="${user}" method="POST" class="login_form">
+            
             <h2>Crear cuenta</h2>
             <label for="correo">Correo</label>
             <input type="text" id="correo" name="correo" required="true" />
@@ -15,5 +17,6 @@
             </div>
             <button type="submit">Crear cuenta</button>
         </form>
+        </div>
     </body>
 </html>
