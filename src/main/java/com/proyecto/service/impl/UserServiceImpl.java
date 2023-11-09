@@ -23,9 +23,16 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional(readOnly = true)
-    public User getUser(User user) {
-        return userDao.findById(user.getIdUser()).orElse(null);
+    public User getUser(String correo , String contrasena  ) {
+        User user = userDao.findByCorreo(correo);
+
+        if (user != null && user.getContrasena().equals(contrasena)) {
+            return user; 
+        }
+
+        return null;
     }
+    
 
     @Override
     @Transactional

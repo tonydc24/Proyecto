@@ -7,9 +7,10 @@ import java.util.List;
 public interface UserService {
     public List<User> getUsers(int id);
     
-    public User getUser(User user);
+    public User getUser(String correo , String  contrasena);
     
     public void save(User user);
+    
     
   
 }

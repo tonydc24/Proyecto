@@ -1,21 +1,16 @@
 
-<html xmlns ="http://www.w3.org/1999/xhtml"
-      xmlns:th ="http://www.thymeleaf.org/">
- <head th:replace="~{layout/plantilla :: head}">
-        <title>Tienda</title>
-      
-    </head>
-    <body>
-          <form th:action="@{/user/crear}" th:object="${user}"
-                              method="POST" class="was-validated">
-                <h2>Crear cuenta</h2>
-                <label for="usuario">Correo</label>
-                <input type="text" id="correo" name="correo" required="true"/>
-                <label for="contrasena">Contraseña</label>
-                <input type="password" id="contrasena" name="contrasena" />
-<!--                 <label for="contrasena">Confirmar contraseña</label>
-                <input type="password" id="contrasenaConfirmar" name="contrasenaConfirmar" />-->
-                <button type="submit">Crear cuenta</button>
-            </form>
-    </body>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout/plantilla :: head}">
+    <title>Tienda</title>
+</head>
+<body>
+    <form th:action="@{/user/crear}" th:object="${user}" method="POST" class="was-validated">
+        <h2>Crear cuenta</h2>
+        <label for="correo">Correo</label>
+        <input type="text" id="correo" name="correo" required="true" />
+        <label for="contrasena">Contraseña</label>
+        <input type="password" id="contrasena" name="contrasena" />
+        <button type="submit">Crear cuenta</button>
+    </form>
+</body>
 </html>
