@@ -1,0 +1,19 @@
+
+<html xmlns ="http://www.w3.org/1999/xhtml"
+      xmlns:th ="http://www.thymeleaf.org/">
+    <head th:replace="~{layout/plantilla :: head}">
+        <title>Tienda</title>
+    </head>
+    <body class="login_body">
+        <div class="login_div">
+            <form class="login_form" th:action="@{/login}" method="POST">
+                <h2>Iniciar Sesión</h2>
+                <label for="usuario">Correo</label>
+                <input type="text" id="correo" name="correo" required="true"/>
+                <label for="contrasena">Contraseña</label>
+                <input type="password" id="contrasena" name="contrasena" />
+                <button type="submit">Iniciar Sesión</button>
+            </form>
+        </div>
+    </body>
+</html>
