@@ -12,7 +12,7 @@
                 <input type="text" id="correo" name="correo" required="true"/>
                 <label for="contrasena">Contraseña</label>
                 <input type="password" id="contrasena" name="contrasena" />
-                <div th:if="${param.error}">
+                <div th:if="${error}">
                     <p style="color: red;">Error: Nombre de usuario o contraseña incorrectos.</p>
                 </div>
                 <button type="submit">Iniciar Sesión</button>

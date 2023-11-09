@@ -38,17 +38,22 @@ public class UserController {
     }
 
 //////////////////////////////////////////////////
-
     @GetMapping("/create")
     public String create() {
         return "/user/create";
     }
 
     @PostMapping("/crear")
-public String crearCuenta(User user,Model model) {
-    
-    userService.save(user);
-     model.addAttribute("showPopup", true);
-    return "/index"; 
-}
+    public String crearCuenta(User user, Model model) {
+        String correo = user.getCorreo();
+        User existingUser = userDao.findByCorreo(correo);
+
+        if (existingUser != null) {
+            model.addAttribute("existe", true);
+            return "/user/create";
+        } else {
+            userService.save(user);
+            return "/index";
+        }
+    }
 }

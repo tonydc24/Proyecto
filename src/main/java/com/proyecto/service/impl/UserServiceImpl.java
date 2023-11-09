@@ -14,12 +14,7 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDao userDao;
 
-    @Override
-    @Transactional(readOnly = true)
-    public List<User> getUsers(int activos) {
-        var lista = userDao.findAll();
-        return lista;
-    }
+    
 
     @Override
     @Transactional(readOnly = true)
@@ -36,7 +31,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public void save(User user) {
+    public void save(User user ) {
         userDao.save(user);
     }
 }
