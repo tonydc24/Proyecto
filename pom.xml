@@ -14,7 +14,7 @@
 	<name>Proyecto_Tienda</name>
 	<description>Proyecto curso patrones web</description>
 	<properties>
-		<java.version>18</java.version>
+		<java.version>20</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

@@ -21,13 +21,17 @@ public class User implements Serializable{
     private long idUser;
     private String correo;
     private String contrasena;
+    private String direccion;
 
     public User() {
     }
 
-    public User(String correo, String contrasena) {
+    public User(String correo, String contrasena, String direccion) {
         this.correo = correo;
         this.contrasena = contrasena;
+        this.direccion = direccion;
     }
+
+    
     
 }
