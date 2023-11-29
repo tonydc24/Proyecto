@@ -7,10 +7,7 @@ package com.proyecto.service;
 import com.proyecto.domain.Producto;
 import java.util.List;
 
-/**
- *
- * @author Anthony
- */
+
 public interface ProductoService {
     
     

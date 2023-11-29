@@ -24,21 +24,19 @@ public class Categoria implements Serializable{ //serializacion guarda disco en 
     
     
     private long idCategoria;
-    private String nombre;
     private String descripcion;
     private boolean activo;
 
     
-//    @OneToMany
-//    @JoinColumn (name ="id_categoria" , updatable = false)
-//    List <Producto> productos;
+    @OneToMany
+    @JoinColumn (name ="id_categoria" , updatable = false)
+    List <Producto> productos;
     
     
     public Categoria() {
     }
 
-    public Categoria(String nombre, String descripcion, boolean activo) {
-        this.nombre = nombre;
+    public Categoria( String descripcion, boolean activo) {
         this.descripcion = descripcion;
         this.activo = activo;
     }

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns="http://www.w3.org/199/xhtml">    
+    <head th:replace="~{layout/plantilla :: head}">        
+        <title>TechShop</title>    
+    </head>    
+    <body>
+        <img src="https://cdn.discordapp.com/attachments/567553791855951873/1179196050729353306/image.png?ex=6578e6e6&is=656671e6&hm=dac6ee1a5903a23d686525b106340781d46ba1a6bb2684fe3fca90762c08470e&" alt="backgroundTienda" class="backgroundTienda"/>
+        <header th:replace="~{layout/plantilla :: header}"/> 
+        <section th:replace="~{tienda/fragmentos :: filtros}"/>         
+        <section th:replace="~{tienda/fragmentos :: listadoProductos}"/>
+    </body>
+</html>
+
+

@@ -6,28 +6,44 @@
         <meta charset="UTF-8"/>
         <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
         <link th:href="@{/webjars/font-awesome/css/all.css}" rel="stylesheet"/>
-        <link rel="stylesheet"type="text/css" href="../css/estilos.css"/>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/estilos.css}" />
+        <script th:src="@{/rutinas/rutina.js}"></script>
+
         <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
         <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
         <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>  
     </head>
     <body>
         <header th:fragment="header" > 
-            <nav class="navbar navbar-expand-sm navbar-dark bg-danger p-0">
+            <nav class="navbar navbar-expand-sm navbar-dark custom-navbar p-0">
                 <div class="container">
-                    <a th:href="@{/}" class="navbar-brand">Tienda</a>
+                    <a th:href="@{/}" class="navbar-brand">
+                        <img src="https://cdn.discordapp.com/attachments/567553791855951873/1179194537260896346/image.png?ex=6578e57e&is=6566707e&hm=cb04993c3b935e011f13cba9363342e85c4d6eb00af93b42f96c77737b4f954b&" alt="logoTienda" class="logo-img">       
+                    </a>
                     <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <ul class="navbar-nav">
-                            <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/user/login}">Iniciar sesion</a></li>
-                            <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/user/create}">Crear cuenta</a></li>
                             <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/info/inform}">Sobre nosotros</a></li>
-                            <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/info/productos}">Productos</a></li>
-                        </ul> 
+                            <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/producto/listado}">Productos</a></li>
+                            <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/categoria/listado}">Categorias</a></li>
+                            <li class="nav-item px-2"><a class="nav-menu-link nav-link" th:href="@{/tienda/listado}">Tienda</a></li>
+                        </ul>
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
+                                    <i class="fas fa-user"></i>
+                                </a>                                
+                                <ul class="dropdown-menu dropdown-menu-white">
+                                    <li class="nav-item px-2"><a class="nav-menu-link nav-link text-dark" th:href="@{/user/login}">Iniciar sesión</a></li>
+                                    <li class="nav-item px-2"><a class="nav-menu-link nav-link text-dark" th:href="@{/user/create}">Crear cuenta</a></li>                         
+                                </ul>                            
+                            </li>
+                              
+                        </ul>
                     </div>
-                </div>   
+                </div>
             </nav>
         </header>
     </body>

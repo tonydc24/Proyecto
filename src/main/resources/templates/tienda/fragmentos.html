@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"     
+      xmlns:th="http://www.thymeleaf.org">    
+    <body>        
+        <section th:fragment="filtros" id="categorias" class="filter-section">           
+            <div class="row py-4">                
+                <ul class="nav nav-tabs">                    
+                    <li class="nav-item">                        
+                        <a class="nav-link"                            
+                           aria-current="page"                           
+                           href="/tienda/listado"                           
+                           >Todos</a>                    
+                    </li>                    
+                    <li th:each="categoria : ${categorias}" class="nav-item">                        
+                        <a class="nav-link" th:href="@{/tienda/listado/}+${categoria.idCategoria}" >
+                            [[${categoria.descripcion}]]
+                        </a>                    
+                    </li>                                   
+                </ul>            
+            </div>        
+        </section>
+        
+        <section th:fragment="listadoProductos" id="productos">
+            <div class="row row-cols-4" id="listaProductos">
+                <div class="card cardTienda" th:each="p : ${productos}">
+                    <a th:href="@{//{idProducto}(idProducto=${p.idProducto})}" class="card-link">
+                        <div class="card-header">                        
+                            <h4 class="card-title">[[${p.descripcion}]]</h4>                    
+                        </div>                     
+                        <figure>
+                            <img th:src="${p.rutaImagen}" class="card-img-top" alt="..." />                        
+                            <figcaption>[[${p.precio}+' ('+${p.existencias}+')']]</figcaption>                    
+                        </figure>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </body>
+</html>

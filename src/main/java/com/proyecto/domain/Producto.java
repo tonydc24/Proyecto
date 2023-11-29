@@ -29,7 +29,6 @@ public class Producto implements Serializable{ //serializacion guarda disco en m
     private String detalle;
     private double precio;
     private int existencias;
-    //private long idCategoria;
     
     @ManyToOne
     @JoinColumn(name="id_categoria")
