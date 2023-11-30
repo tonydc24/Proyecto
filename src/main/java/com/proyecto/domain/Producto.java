@@ -25,6 +25,7 @@ public class Producto implements Serializable{ //serializacion guarda disco en m
     private String nombre;
     private String descripcion;
     private String rutaImagen;
+    private String rutaImagen2;
     private boolean activo;
     
     private String detalle;

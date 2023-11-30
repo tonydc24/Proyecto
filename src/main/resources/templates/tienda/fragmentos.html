@@ -18,12 +18,11 @@
                     </li>                                   
                 </ul>            
             </div>        
-        </section>
-        
+        </section>     
         <section th:fragment="listadoProductos" id="productos">
             <div class="row row-cols-4" id="listaProductos">
                 <div class="card cardTienda" th:each="p : ${productos}">
-                    <a th:href="@{//{idProducto}(idProducto=${p.idProducto})}" class="card-link">
+                    <a th:href="@{/tienda/productoItem/{idProducto}(idProducto=${p.idProducto})}" class="card-link">
                         <div class="card-header">                        
                             <h4 class="card-title">[[${p.nombre}]]</h4>                    
                         </div>                     

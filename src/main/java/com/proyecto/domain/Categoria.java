@@ -24,7 +24,6 @@ public class Categoria implements Serializable{ //serializacion guarda disco en 
     
     
     private long idCategoria;
-   
     private String descripcion;
     private boolean activo;
 

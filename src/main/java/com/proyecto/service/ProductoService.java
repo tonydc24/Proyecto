@@ -16,6 +16,8 @@ public interface ProductoService {
     
    // Se obtiene un Producto, a partir del id de un producto
     public Producto getProducto(Producto producto);
+    
+    public Producto obtenerProductoPorId(Long idProducto);
 
     // Se inserta un nuevo producto si el id del producto esta vacío
     // Se actualiza un producto si el id del producto NO esta vacío

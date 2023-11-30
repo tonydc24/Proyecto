@@ -41,6 +41,12 @@ public class ProductoServiceImpl implements ProductoService {
     public Producto getProducto(Producto producto) {
         return productoDao.findById(producto.getIdProducto()).orElse(null);
     }
+    
+      @Override
+    @Transactional(readOnly = true)
+    public Producto obtenerProductoPorId(Long idProducto) {
+        return productoDao.findById(idProducto).orElse(null);
+    }
 
     @Override
     @Transactional
