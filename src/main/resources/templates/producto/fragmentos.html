@@ -217,25 +217,23 @@
                                                 </div>
                                                 <div class="mb-3">
                                                     <label for="imagen">Imagen</label>
-                                                    <input class="form-control" type="file" name="imagenFile"
-                                                           onchange="readURL(this);" />
+                                                    <input class="form-control" type="file" name="imagenFile" onchange="readURL(this);" />
                                                     <img id="blah" th:src="@{${producto.rutaImagen}}" alt="your image" height="200"/>
                                                 </div>
-                                                  <div class="mb-3">
+                                                <div class="mb-3">
                                                     <label for="imagen2">Imagen 2</label>
-                                                    <input class="form-control" type="file" name="imagenFile"
-                                                           onchange="readURL(this);" />
+                                                    <input class="form-control" type="file" name="imagenFile2" onchange="readURL(this);" />
                                                     <img id="blah" th:src="@{${producto.rutaImagen2}}" alt="your image" height="200"/>
                                                 </div>        
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                </form>
                             </div>
-                    </form>
-                    </div>
-                    </div>
-                    </section>
+                        </div>
+                        </section>
 
         <!-- 5 Fragmento que se utiliza en el fragmento anterior -->
         <section th:fragment="botonesEditar">

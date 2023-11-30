@@ -44,6 +44,7 @@ public class TiendaController {
     public String mostrarDetalleProducto(@PathVariable Long idProducto, Model model) {
         var producto = productoService.obtenerProductoPorId(idProducto);
         model.addAttribute("producto",producto);
+        model.addAttribute("existencias", producto.getExistencias());
         return "/tienda/productoItem";
     }
 

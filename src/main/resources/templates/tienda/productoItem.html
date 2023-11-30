@@ -5,7 +5,8 @@
         <title>TechShop</title>
     </head>   
         <body>
-            <header th:replace="~{layout/plantilla :: header}"/> 
+            <header th:replace="~{layout/plantilla :: header}"/>
+            <img src="https://cdn.discordapp.com/attachments/567553791855951873/1179870088346730546/image.png?ex=657b5aa5&is=6568e5a5&hm=5003002f6f21e1b634202498a5b832264f458240ca253bacd3728d88198bc038&" alt="backgroundTiendaProducto" class="backgroundTiendaProducto"/>
             <section class="section1" id="producto">
                 <article>
                     <figure class="img1">
@@ -21,11 +22,17 @@
                     </form>
                 </section>
                 <section class="section3">
-                     <div>Costo de envió de 2.500-4.500</div>
-                     <button class="agregarBttn" style="" onclick="agregarAlCarrito('${producto.nombre}', '${producto.precio}')">
+                    <div>Costo de envió de 2.500-4.500</div>
+                    <button class="agregarBttn" style="" onclick="agregarAlCarrito('${producto.nombre}', '${producto.precio}')">
                         Agregar al carrito
                     </button>
-                      <button class="comprarBttn">
+                    <div class="mb-3 cantidadDrop">
+                        <label for="cantidad">Cantidad</label>
+                        <select class="form-select" aria-label="Default select example" name="cantidad" required="true">
+                            <option th:each="i : ${#numbers.sequence(1, producto.existencias)}" th:value="${i}" th:text="${i}"></option>
+                        </select>
+                    </div>
+                    <button class="comprarBttn">
                         Comprar ahora
                     </button>   
                 </section>
