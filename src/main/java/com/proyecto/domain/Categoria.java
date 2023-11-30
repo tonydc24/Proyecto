@@ -24,6 +24,7 @@ public class Categoria implements Serializable{ //serializacion guarda disco en 
     
     
     private long idCategoria;
+   
     private String descripcion;
     private boolean activo;
 
@@ -36,7 +37,8 @@ public class Categoria implements Serializable{ //serializacion guarda disco en 
     public Categoria() {
     }
 
-    public Categoria( String descripcion, boolean activo) {
+    public Categoria(String descripcion, boolean activo) {
+        
         this.descripcion = descripcion;
         this.activo = activo;
     }

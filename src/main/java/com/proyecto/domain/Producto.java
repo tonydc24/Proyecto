@@ -22,6 +22,7 @@ public class Producto implements Serializable{ //serializacion guarda disco en m
     
     
     private long idProducto;
+    private String nombre;
     private String descripcion;
     private String rutaImagen;
     private boolean activo;
@@ -37,10 +38,10 @@ public class Producto implements Serializable{ //serializacion guarda disco en m
     public Producto() {
     }
 
-    public Producto(String descripcion, boolean activo) {
+    public Producto(String nombre, String descripcion, boolean activo) {
+        this.nombre = nombre;
         this.descripcion = descripcion;
         this.activo = activo;
     }
-    
     
 }

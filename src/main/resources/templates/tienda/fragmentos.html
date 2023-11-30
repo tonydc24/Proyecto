@@ -25,7 +25,7 @@
                 <div class="card cardTienda" th:each="p : ${productos}">
                     <a th:href="@{//{idProducto}(idProducto=${p.idProducto})}" class="card-link">
                         <div class="card-header">                        
-                            <h4 class="card-title">[[${p.descripcion}]]</h4>                    
+                            <h4 class="card-title">[[${p.nombre}]]</h4>                    
                         </div>                     
                         <figure>
                             <img th:src="${p.rutaImagen}" class="card-img-top" alt="..." />                        

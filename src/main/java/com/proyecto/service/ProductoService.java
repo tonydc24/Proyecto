@@ -12,7 +12,7 @@ public interface ProductoService {
     
     
     
-    public List<Producto> getProductos(boolean activos);
+    public List<Producto> getProductos(boolean activos, boolean ordenarPrecio);
     
    // Se obtiene un Producto, a partir del id de un producto
     public Producto getProducto(Producto producto);

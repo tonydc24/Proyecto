@@ -20,7 +20,7 @@ public class TiendaController {
 
    @GetMapping("/listado")
     public String listado(Model model) {
-        var productos = productoService.getProductos(false);
+        var productos = productoService.getProductos(false, true);
         var categorias = categoriaService.getCategorias(false);
         model.addAttribute("productos", productos);
         model.addAttribute("totalProductos", productos.size());
@@ -37,4 +37,14 @@ public class TiendaController {
         model.addAttribute("categorias", categorias);
         return "/tienda/listado";
     }
+    
+     @GetMapping("/listado/{idProducto}")
+    public String listado2(Model model) {
+        var productos = productoService.getProductos(false, true);
+        var categorias = categoriaService.getCategorias(false);
+        model.addAttribute("productos", productos);
+        model.addAttribute("totalProductos", productos.size());
+        model.addAttribute("categorias", categorias);
+        return "/tienda/listado";
+    } 
 }
