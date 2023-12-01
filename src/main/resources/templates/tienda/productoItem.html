@@ -13,11 +13,15 @@
                 </figure>
             </article>
             <section class="section1">
-                <h1 th:text="${producto.nombre}"></h1>
+                <h1 class="titulo" th:text="${producto.nombre}"></h1>
                 <form method="post">
-                    <div th:text="${producto.descripcion}"></div>
-                    <div th:text="${producto.detalle}"></div>
-                    <div th:text="${producto.precio}"></div>
+                    <div class="div1" th:text="${producto.descripcion}"></div>
+                    <hr class="linea">
+                    <div class="div2" th:text="${producto.detalle}"></div>
+                    
+                      
+                    <div class="div3" th:text="${producto.precio}"></div>
+                    
                 </form>
             </section>
             <section class="section2">
@@ -25,7 +29,7 @@
                 <button class="agregarBttn" style="" onclick="agregarAlCarrito('${producto.nombre}', '${producto.precio}')">
                     Agregar al carrito
                 </button>
-                <div class="mb-3 cantidadDrop">
+                <div class="cantidadDrop">
                     <label for="cantidad">Cantidad</label>
                     <select class="form-select" aria-label="Default select example" name="cantidad" required="true">
                         <option th:each="i : ${#numbers.sequence(1, producto.existencias)}" th:value="${i}" th:text="${i}"></option>

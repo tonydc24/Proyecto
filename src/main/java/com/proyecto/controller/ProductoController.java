@@ -49,7 +49,7 @@ public class ProductoController {
             @RequestParam("imagenFile2") MultipartFile imagenFile2) {
         productoService.save(producto);
 
-        if (imagenFile != null && !imagenFile.isEmpty()) {
+        if (!imagenFile.isEmpty()) {
             producto.setRutaImagen(
                     firebaseStorageService.cargaImagen(
                             imagenFile,
@@ -57,7 +57,7 @@ public class ProductoController {
                             producto.getIdProducto()));
         }
 
-        if (imagenFile2 != null && !imagenFile2.isEmpty()) {
+        if (!imagenFile2.isEmpty()) {
             producto.setRutaImagen2(
                     firebaseStorageService.cargaImagen(
                             imagenFile2,
